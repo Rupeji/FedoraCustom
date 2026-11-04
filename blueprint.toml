@@ -21,7 +21,6 @@ version = "*"
 name = "xorg-x11-drv-nvidia-cuda"
 version = "*"
 
-
 # --- PASO 2: ENTORNO GRÁFICO PERSONALIZADO (KINETICWE) ---
 [[packages]]
 name = "kineticwe"
@@ -34,7 +33,6 @@ version = "*"
 [[packages]]
 name = "greetd"
 version = "*"
-
 
 # --- PASO 3: CONECTIVIDAD Y AUDIO ---
 [[packages]]
@@ -96,6 +94,35 @@ version = "*"
 name = "timeshift"
 version = "*"
 
+# --- APLICACIONES DE USUARIO Y UTILIDADES ---
+[[packages]]
+name = "firefox"
+version = "*"
+
+[[packages]]
+name = "loupe"
+version = "*"
+
+[[packages]]
+name = "gnome-text-editor"
+version = "*"
+
+[[packages]]
+name = "flameshot"
+version = "*"
+
+[[packages]]
+name = "mediawriter"
+version = "*"
+
+[[packages]]
+name = "nemo"
+version = "*"
+
+[[packages]]
+name = "nemo-fileroller"
+version = "*"
+
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
 name = "micro"
@@ -104,7 +131,6 @@ version = "*"
 [[packages]]
 name = "htop"
 version = "*"
-
 
 # --- CONFIGURACIONES DEL SISTEMA ---
 [customizations.locale]
