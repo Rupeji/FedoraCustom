@@ -1,6 +1,6 @@
 name = "fedora-minimo"
 description = "Instalacion minima configurada de Fedora 45 Tradicional"
-version = "1.0.1"
+version = "1.0.2"
 modules = []
 groups = []
 
@@ -15,21 +15,20 @@ version = "*"
 
 # 1. IDIOMA Y TECLADO
 [customizations.locale]
-languages = ["es_ES.UTF-8"] # Sistema en español
-keyboard = "es"             # Distribución de teclado en español
+languages = ["es_ES.UTF-8"]
+keyboard = "es"
 
 # 2. ZONA HORARIA
 [customizations.timezone]
-timezone = "Europe/Madrid"  # Configura tu hora local automática
+timezone = "Europe/Madrid"
 
-# 3. NOMBRE DEL EQUIPO (Hostname)
-[customizations.hostname]
+# 3. CONFIGURACIONES DIRECTAS (Arreglado: sin corchetes en la cabecera)
+[customizations]
 hostname = "fedora"
 
-# 4. CONFIGURACIÓN DEL USUARIO (Con contraseña encriptada segura)
+# 4. CONFIGURACIÓN DEL USUARIO
 [[customizations.user]]
 name = "inhumano"
 description = "Usuario Principal"
-# Este es el hash criptográfico SHA-512 real para la contraseña: Pacopicopoco.7
 password = "$6$rounds=656000$p4O6G2d8t.W5JpBv$nQpT3BwunZ7hK6/t6G708E77pEexS8R9DOnkXw0ZJbFm4f8V.XW3pPWh7XvR9Qy4sLWh7Yf2vWR7vYf2vWR7v."
-groups = ["wheel"] # Permisos de administrador (sudo)
+groups = ["wheel"]
