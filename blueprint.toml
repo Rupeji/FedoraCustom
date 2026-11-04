@@ -1,0 +1,20 @@
+name = "fedora-minimo"
+description = "Instalacion minima de Fedora 45 Tradicional"
+version = "1.0.0"
+modules = []
+groups = []
+
+# Añadimos herramientas esenciales para la terminal
+[[packages]]
+name = "micro"
+version = "*"
+
+[[packages]]
+name = "htop"
+version = "*"
+
+# CONFIGURACIÓN DEL USUARIO (Sustituye "tu_usuario" por el nombre que quieras)
+[[customizations.user]]
+name = "rupeji"
+description = "Usuario Principal"
+groups = ["wheel"] # Te da permisos de Administrador (sudo)
