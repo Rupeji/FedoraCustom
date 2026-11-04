@@ -1,0 +1,33 @@
+name: Compilar Fedora 45 Custom
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: # Te permite darle a un boton en GitHub para compilar cuando quieras
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Crear carpeta para el resultado
+        run: mkdir -p output
+
+      - name: Compilar imagen con la herramienta oficial de OSBuild
+        run: |
+          sudo podman run --privileged \
+            -v .:/workspace:z \
+            -v ./output:/output:z \
+            ghcr.io/osbuild/image-builder-cli:latest \
+            build \
+            --distro fedora-45 \
+            --blueprint /workspace/blueprint.toml \
+            qcow2
+
+      - name: Subir imagen empaquetada a GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: fedora-45-custom-image
+          path: output/*
+          retention-days: 3
