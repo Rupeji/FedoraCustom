@@ -23,7 +23,7 @@ jobs:
             build \
             --distro fedora-45 \
             --blueprint /workspace/blueprint.toml \
-            qcow2
+            image-installer
 
       - name: Subir imagen empaquetada a GitHub
         uses: actions/upload-artifact@v4
