@@ -1,10 +1,49 @@
 name = "fedora-minimo"
 description = "Instalacion minima configurada de Fedora 45 Tradicional"
-version = "1.0.2"
+version = "1.0.4"
 modules = []
 groups = []
 
-# HERRAMIENTAS ESENCIALES
+# --- REPOSITORIOS ADICIONALES (Para Nvidia y Firmwares propietarios) ---
+[[repository]]
+id = "rpmfusion-nonfree"
+name = "RPM Fusion for Fedora 45 - Nonfree"
+baseurl = "https://rpmfusion.org"
+enabled = true
+gpgcheck = true
+
+[[repository]]
+id = "rpmfusion-nonfree-updates"
+name = "RPM Fusion for Fedora 45 - Nonfree - Updates"
+baseurl = "https://rpmfusion.org"
+enabled = true
+gpgcheck = true
+
+
+# --- PAQUETES DE HARDWARE ESENCIALES ---
+
+# Microcódigo para tu procesador AMD Ryzen 5800X (Estabilidad del sistema)
+[[packages]]
+name = "amd-ucode-firmware"
+version = "*"
+
+# Firmware general de red (Wi-Fi/Bluetooth) y periféricos
+[[packages]]
+name = "linux-firmware"
+version = "*"
+
+# CONTROLADORES OFICIALES NVIDIA (Para tu RTX 3070 Ti)
+[[packages]]
+name = "akmod-nvidia"
+version = "*"
+
+# Soporte de aceleración de video por hardware (Cuda/NVDEC) para Nvidia
+[[packages]]
+name = "xorg-x11-drv-nvidia-cuda"
+version = "*"
+
+
+# --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
 name = "micro"
 version = "*"
@@ -13,20 +52,18 @@ version = "*"
 name = "htop"
 version = "*"
 
-# 1. IDIOMA Y TECLADO
+
+# --- CONFIGURACIONES DEL SISTEMA ---
 [customizations.locale]
 languages = ["es_ES.UTF-8"]
 keyboard = "es"
 
-# 2. ZONA HORARIA
 [customizations.timezone]
 timezone = "Europe/Madrid"
 
-# 3. CONFIGURACIONES DIRECTAS (Arreglado: sin corchetes en la cabecera)
 [customizations]
 hostname = "fedora"
 
-# 4. CONFIGURACIÓN DEL USUARIO
 [[customizations.user]]
 name = "inhumano"
 description = "Usuario Principal"
