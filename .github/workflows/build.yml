@@ -22,10 +22,11 @@ jobs:
             ghcr.io/osbuild/image-builder-cli:latest \
             build \
             --distro fedora-45 \
-            --extra-repo https://copr.fedorainfracloud.org/coprs/theblackdon/kwee/repo/fedora-45/theblackdon-kwee-fedora-45.repo \
+            --extra-repo https://download.copr.fedorainfracloud.org/results/theblackdon/kwee/fedora-45-x86_64/ \
             --blueprint /workspace/blueprint.toml \
             image-installer
-# https://copr.fedorainfracloud.org/coprs/theblackdon/kwee/repo/fedora-45/theblackdon-kwee-fedora-45.repo
+# https://download.copr.fedorainfracloud.org/results/theblackdon/kwee/fedora-45-x86_64/
+
 
 
       - name: Subir imagen empaquetada a GitHub
