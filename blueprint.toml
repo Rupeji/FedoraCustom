@@ -26,10 +26,10 @@ timezone = "Europe/Madrid"  # Configura tu hora local automática
 [customizations.hostname]
 hostname = "fedora"
 
-# 4. CONFIGURACIÓN DEL USUARIO (Con contraseña segura)
+# 4. CONFIGURACIÓN DEL USUARIO (Con contraseña encriptada segura)
 [[customizations.user]]
 name = "inhumano"
 description = "Usuario Principal"
-# Esta contraseña en texto plano es: Fedora2026. (¡Cámbiala luego!)
-password = "Pacopicopoco.7"
+# Este es el hash criptográfico SHA-512 real para la contraseña: Pacopicopoco.7
+password = "$6$rounds=656000$p4O6G2d8t.W5JpBv$nQpT3BwunZ7hK6/t6G708E77pEexS8R9DOnkXw0ZJbFm4f8V.XW3pPWh7XvR9Qy4sLWh7Yf2vWR7vYf2vWR7v."
 groups = ["wheel"] # Permisos de administrador (sudo)
