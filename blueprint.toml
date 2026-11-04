@@ -1,45 +1,26 @@
 name = "fedora-minimo"
 description = "Instalacion minima configurada de Fedora 45 Tradicional"
-version = "1.0.4"
+version = "1.0.5"
 modules = []
 groups = []
 
-# --- REPOSITORIOS ADICIONALES (Para Nvidia y Firmwares propietarios) ---
-[[repository]]
-id = "rpmfusion-nonfree"
-name = "RPM Fusion for Fedora 45 - Nonfree"
-baseurl = "https://rpmfusion.org"
-enabled = true
-gpgcheck = true
-
-[[repository]]
-id = "rpmfusion-nonfree-updates"
-name = "RPM Fusion for Fedora 45 - Nonfree - Updates"
-baseurl = "https://rpmfusion.org"
-enabled = true
-gpgcheck = true
-
-# --- PAQUETES DE HARDWARE ESENCIALES ---
-
-# Microcódigo para tu procesador AMD Ryzen 5800X (Estabilidad del sistema)
+# --- PAQUETES DE HARDWARE ESENCIALES (Paso 1) ---
 [[packages]]
 name = "amd-ucode-firmware"
 version = "*"
 
-# Firmware general de red (Wi-Fi/Bluetooth) y periféricos
 [[packages]]
 name = "linux-firmware"
 version = "*"
 
-# CONTROLADORES OFICIALES NVIDIA (Para tu RTX 3070 Ti)
 [[packages]]
 name = "akmod-nvidia"
 version = "*"
 
-# Soporte de aceleración de video por hardware (Cuda/NVDEC) para Nvidia
 [[packages]]
 name = "xorg-x11-drv-nvidia-cuda"
 version = "*"
+
 
 # --- PASO 2: ENTORNO GRÁFICO PERSONALIZADO (KINETICWE) ---
 [[packages]]
@@ -53,6 +34,25 @@ version = "*"
 [[packages]]
 name = "greetd"
 version = "*"
+
+
+# --- PASO 3: CONECTIVIDAD Y AUDIO ---
+[[packages]]
+name = "pipewire"
+version = "*"
+
+[[packages]]
+name = "pipewire-utils"
+version = "*"
+
+[[packages]]
+name = "wireplumber"
+version = "*"
+
+[[packages]]
+name = "NetworkManager-wifi"
+version = "*"
+
 
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
@@ -80,17 +80,3 @@ name = "inhumano"
 description = "Usuario Principal"
 password = "$6$rounds=656000$p4O6G2d8t.W5JpBv$nQpT3BwunZ7hK6/t6G708E77pEexS8R9DOnkXw0ZJbFm4f8V.XW3pPWh7XvR9Qy4sLWh7Yf2vWR7vYf2vWR7v."
 groups = ["wheel"]
-
-[[customizations.repository]]
-id = "rpmfusion-nonfree"
-name = "RPM Fusion for Fedora 45 - Nonfree"
-baseurl = "https://rpmfusion.org"
-enabled = true
-gpgcheck = true
-
-[[customizations.repository]]
-id = "rpmfusion-nonfree-updates"
-name = "RPM Fusion for Fedora 45 - Nonfree - Updates"
-baseurl = "https://rpmfusion.org"
-enabled = true
-gpgcheck = true
