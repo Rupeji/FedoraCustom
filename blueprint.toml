@@ -41,6 +41,18 @@ version = "*"
 name = "xorg-x11-drv-nvidia-cuda"
 version = "*"
 
+# --- PASO 2: ENTORNO GRÁFICO PERSONALIZADO (KINETICWE) ---
+[[packages]]
+name = "kineticwe"
+version = "*"
+
+[[packages]]
+name = "kineticwe-greeter"
+version = "*"
+
+[[packages]]
+name = "greetd"
+version = "*"
 
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
