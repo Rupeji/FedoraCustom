@@ -68,3 +68,17 @@ name = "inhumano"
 description = "Usuario Principal"
 password = "$6$rounds=656000$p4O6G2d8t.W5JpBv$nQpT3BwunZ7hK6/t6G708E77pEexS8R9DOnkXw0ZJbFm4f8V.XW3pPWh7XvR9Qy4sLWh7Yf2vWR7vYf2vWR7v."
 groups = ["wheel"]
+
+[[customizations.repository]]
+id = "rpmfusion-nonfree"
+name = "RPM Fusion for Fedora 45 - Nonfree"
+baseurl = "https://rpmfusion.org"
+enabled = true
+gpgcheck = true
+
+[[customizations.repository]]
+id = "rpmfusion-nonfree-updates"
+name = "RPM Fusion for Fedora 45 - Nonfree - Updates"
+baseurl = "https://rpmfusion.org"
+enabled = true
+gpgcheck = true
