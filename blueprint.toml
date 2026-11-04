@@ -1,10 +1,10 @@
 name = "fedora-minimo"
-description = "Instalacion minima de Fedora 45 Tradicional"
-version = "1.0.0"
+description = "Instalacion minima configurada de Fedora 45 Tradicional"
+version = "1.0.1"
 modules = []
 groups = []
 
-# Añadimos herramientas esenciales para la terminal
+# HERRAMIENTAS ESENCIALES
 [[packages]]
 name = "micro"
 version = "*"
@@ -13,8 +13,23 @@ version = "*"
 name = "htop"
 version = "*"
 
-# CONFIGURACIÓN DEL USUARIO (Sustituye "tu_usuario" por el nombre que quieras)
+# 1. IDIOMA Y TECLADO
+[customizations.locale]
+languages = ["es_ES.UTF-8"] # Sistema en español
+keyboard = "es"             # Distribución de teclado en español
+
+# 2. ZONA HORARIA
+[customizations.timezone]
+timezone = "Europe/Madrid"  # Configura tu hora local automática
+
+# 3. NOMBRE DEL EQUIPO (Hostname)
+[customizations.hostname]
+hostname = "fedora"
+
+# 4. CONFIGURACIÓN DEL USUARIO (Con contraseña segura)
 [[customizations.user]]
-name = "rupeji"
+name = "inhumano"
 description = "Usuario Principal"
-groups = ["wheel"] # Te da permisos de Administrador (sudo)
+# Esta contraseña en texto plano es: Fedora2026. (¡Cámbiala luego!)
+password = "Pacopicopoco.7"
+groups = ["wheel"] # Permisos de administrador (sudo)
