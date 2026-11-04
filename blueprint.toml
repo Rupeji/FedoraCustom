@@ -70,6 +70,23 @@ version = "*"
 name = "gstreamer1-plugins-ugly-free"
 version = "*"
 
+# --- PASO 5: TERMINAL AVANZADA Y CONFORT ---
+[[packages]]
+name = "kitty"
+version = "*"
+
+[[packages]]
+name = "fish"
+version = "*"
+
+[[packages]]
+name = "starship"
+version = "*"
+
+[[packages]]
+name = "jetbrains-mono-fonts"
+version = "*"
+
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
 name = "micro"
