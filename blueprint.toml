@@ -87,6 +87,15 @@ version = "*"
 name = "jetbrains-mono-fonts"
 version = "*"
 
+# --- SOPORTE AVANZADO BTRFS Y SNAPSHOTS ---
+[[packages]]
+name = "btrfs-progs"
+version = "*"
+
+[[packages]]
+name = "timeshift"
+version = "*"
+
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
 name = "micro"
