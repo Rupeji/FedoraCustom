@@ -53,6 +53,22 @@ version = "*"
 name = "NetworkManager-wifi"
 version = "*"
 
+# --- PASO 4: GESTIÓN DE SOFTWARE Y FORMATOS ---
+[[packages]]
+name = "flatpak"
+version = "*"
+
+[[packages]]
+name = "gstreamer1-plugins-bad-free"
+version = "*"
+
+[[packages]]
+name = "gstreamer1-plugins-good"
+version = "*"
+
+[[packages]]
+name = "gstreamer1-plugins-ugly-free"
+version = "*"
 
 # --- HERRAMIENTAS ESENCIALES DE ANTES ---
 [[packages]]
