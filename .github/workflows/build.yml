@@ -22,13 +22,9 @@ jobs:
             ghcr.io/osbuild/image-builder-cli:latest \
             build \
             --distro fedora-45 \
-            --extra-repo https://rpmfusion.org\&arch=\$basearch \
-            --extra-repo https://rpmfusion.org-updates\&arch=\$basearch \
             --extra-repo https://fedorainfracloud.org \
             --blueprint /workspace/blueprint.toml \
             image-installer
-# https://rpmfusion.org&arch=$basearch
-# https://rpmfusion.org-updates&arch=$basearch
 # https://fedorainfracloud.org
 
       - name: Subir imagen empaquetada a GitHub
