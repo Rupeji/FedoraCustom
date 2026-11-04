@@ -19,7 +19,6 @@ baseurl = "https://rpmfusion.org"
 enabled = true
 gpgcheck = true
 
-
 # --- PAQUETES DE HARDWARE ESENCIALES ---
 
 # Microcódigo para tu procesador AMD Ryzen 5800X (Estabilidad del sistema)
